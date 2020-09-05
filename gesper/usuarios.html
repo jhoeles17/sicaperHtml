@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESPER</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+    <script defer src="assets/font-awesome/js/all.js"></script> <!--load all styles -->
+</head>
+<body>
+
+    <div class="main d-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 bg-transparent">
+                    <div class="row mt-2 mb-4 borderh">
+                        <div class="col-12 col-sm-9 d-flex align-items-end justify-content-start">
+                            <p class="mb-0 gbold2 displayD">SICAPER</p>&nbsp;&nbsp;
+                            <p class="mb-0 d-none d-sm-block glight2 displayE">Usuarios</p>
+                        </div>
+                        <div class="col-12 d-flex d-sm-none align-items-end justify-content-start">
+                            <p class="mb-0 glight2 displayE">Usuarios</p>
+                        </div>
+                        <div class="col-0 col-sm-3 d-none d-sm-flex align-items-center justify-content-end paddingzero">
+                            <div class="d-flex mb-1 align-items-center justify-content-center">
+                                <span class="h2 text-white text-decoration-none"><i class="fas fa-bars"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm mr-sm-2 d-none d-sm-block bgmenucb">
+                    <div class="row paddingzero">
+                        <div class="col-12 mt-4 mb-1 selmenucb">
+                            <p class="mb-0 pt-2 pb-2 gmedium2 displayF">Usuario</p>
+                        </div>
+                        <div class="col-12 mt-1 mb-0 ">
+                            <p class="mb-0 pt-2 pb-2 gmedium2 displayF">Personal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-10 mr-sm-2 bgcontentcb">
+                    <div class="row h-min-75">
+                        <div class="col-12 d-block d-sm-none">
+                            <div class="row bg-orange">
+                                <div class="col-12 text-right text-md-center btn-toogle-menu">
+                                    <div class="row h-100">
+                                        <div class="col-12 align-self-center">
+                                            <span class="h2 text-white text-decoration-none"><i class="fas fa-bars"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- aqui va el menu flotante -->
+                            <div class="bg-orange menu-float py-2 px-3 py-sm-4">
+                                <ul class="list-unstyled text-right gmedium">
+                                    <li><a class="h5 text-decoration-none text-white" href="#" onclick="changeContent(3)">Mi Perfil</a></li>
+                                    <li><hr class="border-white my-2"></li>
+                                    <li><a class="h5 text-decoration-none text-white" href="#">Soporte</a></li>
+                                    <li><a class="h5 text-decoration-none text-white" href="#">Salir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table id="tbrequerimiento" class="display nowrap" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>DNI</th>
+                                                <th>PERSONAL</th>
+                                                <th>USUARIO</th>
+                                                <th>ROL</th>
+                                                <th>AREA</th>
+                                                <th>ESTADO USUARIO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>45021369</td>
+                                                <td>ABAD TORRES ANA PAOLA</td>
+                                                <td>ATORRES</td>
+                                                <td>ADMINISTRADOR</td>
+                                                <td>OF. DE PRESUPUESTO</td>
+                                                <td>A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>45623160</td>
+                                                <td>CASTILLO OCMIN ALICIA GELINA</td>
+                                                <td>ACASTILLO</td>
+                                                <td>ADMINISTRADOR</td>
+                                                <td>OF. DE PRESUPUESTO</td>
+                                                <td>A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>44441212</td>
+                                                <td>CAZANA ARIAS PEDRO LUIS</td>
+                                                <td>PCAZANA</td>
+                                                <td>ADMINISTRADOR</td>
+                                                <td>OF. DE PRESUPUESTO</td>
+                                                <td>A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>40423651</td>
+                                                <td>PANTALEON CAPCHA MANUEL ANTON</td>
+                                                <td>MPANTA</td>
+                                                <td>ADMINISTRADOR</td>
+                                                <td>OF. DE PRESUPUESTO</td>
+                                                <td>A</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="table-success">
+                                                <th>DNI</th>
+                                                <th>PERSONAL</th>
+                                                <th>USUARIO</th>
+                                                <th>ROL</th>
+                                                <th>AREA</th>
+                                                <th>ESTADO USUARIO</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>  
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/rowreorder/1.2.7/js/dataTables.rowReorder.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+    <script>
+        $('.btn-toogle-menu').click(function () {
+            if ( $('.menu-float').hasClass('active') ) {
+                $('.btn-toogle-menu').removeClass('active');
+                $('.menu-float').removeClass('active');
+            }else{
+                $('.btn-toogle-menu').addClass('active');
+                $('.menu-float').addClass('active');
+            }
+        })
+
+        var langu = {
+            "sProcessing":    "Procesando...",
+            "sLengthMenu":    "Mostrar _MENU_ registros",
+            "sZeroRecords":   "No se encontraron resultados",
+            "sEmptyTable":    "Datos no disponibles en esta tabla",
+            "sInfo":          "Mostrando del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty":     "Mostrando del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix":   "",
+            "sSearch":        "Buscar:",
+            "sUrl":           "",
+            "sInfoThousands":  ",",
+            "sLoadingRecords": "Cargando...",
+            "oPaginate": {
+                "sFirst":    "Primero",
+                "sLast":     "Ultimo",
+                "sNext":     "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        };
+
+        $('#tbrequerimiento').DataTable({
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            language: langu
+        });
+
+        function fnDesactivarDT(){
+            var tbrequerimiento = $('#tbrequerimiento').DataTable();
+            tbrequerimiento.destroy();
+            var tbhistorial = $('#tbhistorial').DataTable();
+            tbhistorial.destroy();
+        }
+
+    </script>
+</body>
+</html>
